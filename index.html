@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ACM Celebrate 2014 | Flappy Pirate</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Include Bootstrap CSS & JS & jQuery -->
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
+        <script src="./js/jQuery.min.js"></script>
+        <script src="./js/boostrap.min.js"></script>
+
+        <style>
+            body {
+                background: #abc;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            #screen {
+                /*display: inline-block;*/
+            }
+            </style>
+        </style>
+    </head>
+    <body>
+      <div style="width:75%; float: left; position: relative;">
+        <div id="screen"></div>
+        <script src="./js/phaser.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/leaderboard.js"></script>
+        <script>
+
+            function start() {
+                init(document.querySelector('#screen'));
+            }
+
+            WebFontConfig = {
+                google: { families: [ 'Press+Start+2P::latin' ] },
+                active: start
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })();
+
+        </script>
+      </div>
+      <div style="width: 25%; float: right; position: relative;">
+        <h1>Leaderboard</h1>
+        <div>
+          <a type="button" class="btn btn-success btn-lg" id="#newPlayer">New Player</a>
+          <a type="button" class="btn btn-primary btn-lg" id="#oldPlayer">Continue</a>
+        </div>
+      </div>
+    </body>
+</html>

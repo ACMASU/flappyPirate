@@ -1,0 +1,4 @@
+/*
+  leaderboard.js
+  Allows users to register for high scores keeps track of high scores
+*/
