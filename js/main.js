@@ -81,7 +81,7 @@ function create() {
     credits = game.add.text(
         game.world.width / 2,
         10,
-        'github.com/acmasu/dtmb',
+        'github.com/acmasu/flappyPirate',
         {
             font: '8px "Press Start 2P"',
             fill: '#fff',
@@ -180,7 +180,7 @@ function reset() {
     gameOver = false;
     score = 0;
     credits.renderable = true;
-    scoreText.setText("DON'T\nSTAB\nTHE\nPIRATE");
+    scoreText.setText("FLAPPY\nPIRATE");
     instText.setText("TOUCH OR CLICK\nTO PLAY");
     gameOverText.renderable = false;
     pirate.body.allowGravity = false;
@@ -205,17 +205,6 @@ function start() {
     // START!
     gameStarted = true;
 }
-
-/*function flap() {
-    if (!gameStarted) {
-        start();
-    }
-    if (!gameOver) {
-        pirate.body.velocity.y = -FLAP;
-        flapSnd.play();
-        console.log(scoreText.text);
-    }
-}*/
 
 flap = function(pointer){
     //this is the test, contains test for a point belonging to a rect definition
